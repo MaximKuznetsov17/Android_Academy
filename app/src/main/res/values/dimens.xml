@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginFirstActivity"> 5sp </dimen>
+    <dimen name="marginLand"> 3sp </dimen>
+    <dimen name="marginField"> 10sp </dimen>
+    <dimen name="marginFieldLand"> 6sp </dimen>
+    <dimen name="marginImage"> 15sp </dimen>
+    <dimen name="marginIcon"> 15sp </dimen>
+    <dimen name="marginText">15sp </dimen>
+
+    <dimen name="textSizeLittle">16sp</dimen>
+    <dimen name="textSizeNormal">20sp</dimen>
+    <dimen name="textSizeBig">24sp</dimen>
+
+    <dimen name="imageSize"> 140dp </dimen>
+    <dimen name="imageSizeLand"> 90dp </dimen>
+    <dimen name="flagSize"> 45dp </dimen>
+    <dimen name="flagSizeLand"> 30dp </dimen>
+    <dimen name="iconSize"> 20dp </dimen>
+    <dimen name="iconSizeBig"> 30dp </dimen>
+    <dimen name="borderSize"> 4dp </dimen>
+
+    <dimen name="backgroundView"> 230dp </dimen>
+    <dimen name="backgroundViewLand"> 110dp </dimen>
+    <dimen name="backgroundViewTop"> 50dp </dimen>
+    <dimen name="backgroundViewTopAdd"> 5dp </dimen>
+</resources>

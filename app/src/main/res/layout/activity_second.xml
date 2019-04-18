@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <View
+        android:id="@+id/backgroundTop"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/backgroundViewTop"
+        android:background="@color/colorBackTop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/imageFlag"/>
+
+    <View
+        android:id="@+id/backgroundTopAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/backgroundViewTopAdd"
+        android:background="@color/colorBackTop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/imageFlag"/>
+
+    <View
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/backgroundView"
+        android:background="@color/colorBack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/imageAuthor"
+        android:layout_width="@dimen/imageSize"
+        android:layout_height="@dimen/imageSize"
+        android:contentDescription="@string/authorDescription"
+        app:civ_border_width="@dimen/borderSize"
+        app:civ_border_color="@color/colorBorder"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/arturvasilov" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/imageFlag"
+        android:layout_width="@dimen/flagSize"
+        android:layout_height="@dimen/flagSize"
+        app:civ_border_width="@dimen/borderSize"
+        app:civ_border_color="@color/colorBorder"
+        android:contentDescription="@string/flagDescription"
+        app:layout_constraintRight_toRightOf="@id/imageAuthor"
+        app:layout_constraintBottom_toBottomOf="@id/imageAuthor"
+        android:src="@drawable/flag" />
+
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/author"
+        android:layout_margin="@dimen/marginField"
+        android:textSize="@dimen/textSizeNormal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageAuthor" />
+
+    <TextView
+        android:id="@+id/position"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginField"
+        android:text="@string/position"
+        android:textColor="@color/colorPosition"
+        app:layout_constraintStart_toEndOf="@id/imageAuthor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/author" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginField"
+        android:text="@string/location"
+        android:textSize="@dimen/textSizeNormal"
+        android:gravity="start"
+        app:layout_constraintLeft_toRightOf="@id/imageAuthor"
+        app:layout_constraintTop_toBottomOf="@id/position" />
+
+    <ImageView
+        android:id="@+id/imageTwitter"
+        android:layout_width="@dimen/iconSizeBig"
+        android:layout_height="@dimen/iconSizeBig"
+        android:layout_margin="@dimen/marginIcon"
+        android:contentDescription="@string/flagDescription"
+        app:layout_constraintLeft_toRightOf="@id/imageAuthor"
+        app:layout_constraintTop_toBottomOf="@id/location"
+        app:layout_constraintBottom_toTopOf="@id/speakerInfo"
+        android:src="@drawable/twitter"/>
+
+    <ImageView
+        android:id="@+id/imageTelegram"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:layout_margin="@dimen/marginIcon"
+        android:contentDescription="@string/flagDescription"
+        app:layout_constraintLeft_toRightOf="@id/imageTwitter"
+        app:layout_constraintTop_toBottomOf="@id/location"
+        app:layout_constraintBottom_toTopOf="@id/speakerInfo"
+        android:src="@drawable/telegram"/>
+
+    <TextView
+        android:id="@+id/speakerInfo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/speakerInfo"
+        android:textSize="@dimen/textSizeNormal"
+        android:layout_margin="@dimen/marginText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageAuthor" />
+
+
+    <TextView
+        android:id="@+id/report"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/report"
+        android:textSize="@dimen/textSizeBig"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/marginText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/background" />
+
+    <TextView
+        android:id="@+id/room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/room"
+        android:textSize="@dimen/textSizeNormal"
+        android:layout_margin="@dimen/marginText"
+        app:layout_constraintTop_toBottomOf="@id/report"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/tag"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_margin="@dimen/marginText"
+        android:text="@string/tag"
+        style="@style/tagStyle"
+        app:layout_constraintTop_toBottomOf="@id/room"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        android:textSize="@dimen/textSizeNormal"
+        android:layout_margin="@dimen/marginText"
+        app:layout_constraintTop_toBottomOf="@id/tag"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:textColor="@color/colorPosition"
+        android:textSize="@dimen/textSizeNormal"
+        android:layout_margin="@dimen/marginText"
+        app:layout_constraintTop_toBottomOf="@id/tag"
+        app:layout_constraintLeft_toRightOf="@id/time"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

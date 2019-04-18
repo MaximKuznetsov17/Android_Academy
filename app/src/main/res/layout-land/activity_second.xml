@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <View
+        android:id="@+id/backgroundTop"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/backgroundViewTop"
+        android:background="@color/colorBackTop"
+        app:layout_constraintRight_toLeftOf="@id/imageFlag"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/backgroundTopAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/backgroundViewTopAdd"
+        android:background="@color/colorBackTop"
+        app:layout_constraintLeft_toLeftOf="@id/imageFlag"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/backgroundViewLand"
+        android:background="@color/colorBack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/imageAuthor"
+        android:layout_width="@dimen/imageSizeLand"
+        android:layout_height="@dimen/imageSizeLand"
+        android:contentDescription="@string/authorDescription"
+        android:src="@drawable/arturvasilov"
+        app:civ_border_color="@color/colorBorder"
+        app:civ_border_width="@dimen/borderSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/imageFlag"
+        android:layout_width="@dimen/flagSizeLand"
+        android:layout_height="@dimen/flagSizeLand"
+        android:contentDescription="@string/flagDescription"
+        android:src="@drawable/flag"
+        app:civ_border_color="@color/colorBorder"
+        app:civ_border_width="@dimen/borderSize"
+        app:layout_constraintBottom_toBottomOf="@id/imageAuthor"
+        app:layout_constraintRight_toRightOf="@id/imageAuthor" />
+
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginFieldLand"
+        android:text="@string/author"
+        android:textSize="@dimen/textSizeNormal"
+        app:layout_constraintStart_toEndOf="@id/imageAuthor"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/position"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginFieldLand"
+        android:text="@string/position"
+        android:textColor="@color/colorPosition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageAuthor"
+        app:layout_constraintTop_toBottomOf="@id/author" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginFieldLand"
+        android:gravity="start"
+        android:text="@string/location"
+        android:textSize="@dimen/textSizeNormal"
+        app:layout_constraintLeft_toRightOf="@id/imageAuthor"
+        app:layout_constraintTop_toBottomOf="@id/position" />
+
+    <ImageView
+        android:id="@+id/imageTwitter"
+        android:layout_width="@dimen/iconSizeBig"
+        android:layout_height="@dimen/iconSizeBig"
+        android:layout_margin="@dimen/marginFieldLand"
+        android:src="@drawable/twitter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/author"
+        app:layout_constraintTop_toBottomOf="@id/location" />
+
+    <ImageView
+        android:id="@+id/imageTelegram"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:layout_margin="@dimen/marginFieldLand"
+        android:src="@drawable/telegram"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/imageTwitter"
+        app:layout_constraintBottom_toTopOf="@id/position" />
+
+
+    <ScrollView
+        android:id="@+id/infoScroll"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_margin="@dimen/marginText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location"
+        app:layout_constraintBottom_toTopOf="@id/background">
+
+        <TextView
+            android:id="@+id/speakerInfo"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:text="@string/speakerInfo"
+            android:textSize="@dimen/textSizeNormal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location"
+            app:layout_constraintBottom_toTopOf="@id/background"/>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/report"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/marginFieldLand"
+        android:text="@string/report"
+        android:textSize="@dimen/textSizeBig"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/background" />
+
+    <Button
+        android:id="@+id/tag"
+        style="@style/tagStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_margin="@dimen/marginFieldLand"
+        android:text="@string/tag"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/report" />
+
+    <TextView
+        android:id="@+id/room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginFieldLand"
+        android:text="@string/room"
+        android:textStyle="bold"
+        android:textSize="@dimen/textSizeNormal"
+        app:layout_constraintTop_toBottomOf="@id/report"
+        app:layout_constraintLeft_toRightOf="@id/tag" />
+
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginFieldLand"
+        android:text="@string/time"
+        android:textStyle="bold"
+        android:textSize="@dimen/textSizeNormal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tag" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginFieldLand"
+        android:text="@string/date"
+        android:textColor="@color/colorPosition"
+        android:textSize="@dimen/textSizeNormal"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/time"
+        app:layout_constraintTop_toBottomOf="@id/tag" />
+
+</android.support.constraint.ConstraintLayout>

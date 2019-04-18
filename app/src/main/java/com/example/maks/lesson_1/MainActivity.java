@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,9 +26,20 @@ public class MainActivity extends AppCompatActivity {
                 openSecondActivity(v);
             }
         });
+        Button allReports = findViewById(R.id.backToMenu);
+        allReports.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openThirdActivity(v);
+            }
+        });
     }
 
     public void openSecondActivity(View view) {
         SecondActivity.start(this);
+    }
+
+    public void openThirdActivity(View view) {
+        ThirdActivity.start(this);
     }
 }

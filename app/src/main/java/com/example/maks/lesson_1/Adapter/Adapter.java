@@ -53,7 +53,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ReportViewHolder> {
         private TextView authorName;
         private TextView authorPosition;
         private TextView authorLocation;
-        private Button viewProfile;
+//        private Button viewProfile;
 
         public ReportViewHolder(View itemView) {
             super(itemView);
@@ -62,7 +62,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ReportViewHolder> {
             authorName = itemView.findViewById(R.id.authorName);
             authorPosition = itemView.findViewById(R.id.authorPosition);
             authorLocation = itemView.findViewById(R.id.authorLocation);
-            viewProfile = (Button) itemView.findViewById(R.id.viewProfile);
+//            viewProfile = itemView.findViewById(R.id.viewProfile);
         }
 
         public void bind(Report report) {
@@ -71,7 +71,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ReportViewHolder> {
             authorLocation.setText(report.getAuthorLocation());
             authorImage.setImageResource(report.getAuthorImage());
             flagImage.setImageResource(report.getFlagImage());
-            viewProfile.setText("View Profile");
+//            viewProfile.setText("View Profile");
         }
     }
 

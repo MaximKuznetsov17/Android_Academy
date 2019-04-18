@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="@dimen/marginField"
     tools:context=".ThirdActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
 
     <TextView
         android:layout_width="0dp"
@@ -48,8 +48,8 @@
         <!--app:layout_constraintTop_toBottomOf="@id/authorLocation" />-->
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="@dimen/imageSize"
-        android:layout_height="@dimen/imageSize"
+        android:layout_width="@dimen/imageSizeLand"
+        android:layout_height="@dimen/imageSizeLand"
         app:civ_border_width="@dimen/borderSize"
         app:civ_border_color="@color/colorBorder"
         android:id="@+id/authorImage"
@@ -58,8 +58,8 @@
         />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="@dimen/flagSize"
-        android:layout_height="@dimen/flagSize"
+        android:layout_width="@dimen/flagSizeLand"
+        android:layout_height="@dimen/flagSizeLand"
         app:civ_border_width="@dimen/borderSize"
         app:civ_border_color="@color/colorBorder"
         app:layout_constraintRight_toRightOf="@id/authorImage"

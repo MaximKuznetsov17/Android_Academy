@@ -10,4 +10,5 @@
     <color name="colorBack">#CCFFFF</color>
     <color name="colorBackTop">#6C4675</color>
     <color name="colorBorder">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
 </resources>

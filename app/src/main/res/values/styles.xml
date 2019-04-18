@@ -15,5 +15,30 @@
         <item name="android:textSize">@dimen/textSizeLittle</item>
         <item name="android:textAllCaps">false</item>
     </style>
+    
+    <style name="positionStyle">
+        <item name="android:textSize">@dimen/textSizeNormal</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/colorPosition</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="nameStyle">
+        <item name="android:textSize">@dimen/textSizeNormal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="viewProfileStyle">
+        <item name="android:gravity"> center </item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:background"> @color/colorBack </item>
+        <item name="android:textColor">@color/colorPosition</item>
+        <item name="android:textSize">@dimen/textSizeLittle</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:bottomRightRadius">@dimen/marginLand</item>
+        <item name="android:bottomLeftRadius">@dimen/marginLand</item>
+    </style>
 
 </resources>

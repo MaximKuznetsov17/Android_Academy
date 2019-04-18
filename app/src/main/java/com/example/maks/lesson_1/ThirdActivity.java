@@ -26,11 +26,11 @@ public class ThirdActivity extends AppCompatActivity {
     TextView authorName;
     TextView authorPosition;
     TextView authorLocation;
-    Button viewProfile;
+//    TextView viewProfile;
 
     public static void start(Activity activity) {
-        Intent secondActivityIntent = new Intent(activity, SecondActivity.class);
-        activity.startActivity(secondActivityIntent);
+        Intent thirdActivityIntent = new Intent(activity, ThirdActivity.class);
+        activity.startActivity(thirdActivityIntent);
     }
 
     @Override
@@ -43,7 +43,7 @@ public class ThirdActivity extends AppCompatActivity {
         authorName = findViewById(R.id.authorName);
         authorPosition = findViewById(R.id.authorPosition);
         authorLocation = findViewById(R.id.authorLocation);
-        viewProfile = findViewById(R.id.viewProfile);
+//        viewProfile = findViewById(R.id.viewProfile);
 
         initRecyclerView();
         loadReports();
@@ -73,21 +73,21 @@ public class ThirdActivity extends AppCompatActivity {
                 new Report(getResources().getIdentifier("tanaypant" , "drawable", getPackageName()),
                         getResources().getIdentifier("flaggermany" , "drawable", getPackageName()),
                         "Tanay Pant", "Engineering Communications Manager at Research Gate", " Berlin, Germany"),
-                new Report(getResources().getIdentifier("alexanderefremenko" , "drawable", getPackageName()),
+                new Report(getResources().getIdentifier("alexanderefremenkov" , "drawable", getPackageName()),
                         getResources().getIdentifier("flag" , "drawable", getPackageName()),
                         "Alexander Efremenkov", "System Android developer at Yandex.Taxi", "Moscow, Russia"),
-                new Report(getResources().getIdentifier("doramilitaru" , "drawable", getPackageName()),
-                        getResources().getIdentifier("flaggb" , "drawable", getPackageName()),
-                        "Dora Militaru", "Senior developer at the Financial Times", "London, The UK"),
-                new Report(getResources().getIdentifier("ilyaklymov" , "drawable", getPackageName()),
-                        getResources().getIdentifier("flagukraine" , "drawable", getPackageName()),
-                        "Ilya Klymov", "CEO at Javascript.Ninja", "Kharkov, Ukraine"),
-                new Report(getResources().getIdentifier("ruslankalabaev" , "drawable", getPackageName()),
-                        getResources().getIdentifier("flag" , "drawable", getPackageName()),
-                        "Ruslan Kalabaev", "Android Developer at Redmadrobot", "St. Petersburg, Russia"),
-                new Report(getResources().getIdentifier("sergeyryabov" , "drawable", getPackageName()),
-                        getResources().getIdentifier("flag" , "drawable", getPackageName()),
-                        "Sergey Ryabov", "Mobile Consultant", "Digital Nomad, Russia"),
+//                new Report(getResources().getIdentifier("doramilitaru" , "drawable", getPackageName()),
+//                        getResources().getIdentifier("flaggb" , "drawable", getPackageName()),
+//                        "Dora Militaru", "Senior developer at the Financial Times", "London, The UK"),
+//                new Report(getResources().getIdentifier("illyaklymov" , "drawable", getPackageName()),
+//                        getResources().getIdentifier("flagukraine" , "drawable", getPackageName()),
+//                        "Ilya Klymov", "CEO at Javascript.Ninja", "Kharkov, Ukraine"),
+//                new Report(getResources().getIdentifier("ruslankalabaev" , "drawable", getPackageName()),
+//                        getResources().getIdentifier("flag" , "drawable", getPackageName()),
+//                        "Ruslan Kalabaev", "Android Developer at Redmadrobot", "St. Petersburg, Russia"),
+//                new Report(getResources().getIdentifier("sergeyryabov" , "drawable", getPackageName()),
+//                        getResources().getIdentifier("flag" , "drawable", getPackageName()),
+//                        "Sergey Ryabov", "Mobile Consultant", "Digital Nomad, Russia"),
                 new Report(getResources().getIdentifier("dougsillars" , "drawable", getPackageName()),
                         getResources().getIdentifier("flagusa" , "drawable", getPackageName()),
                         "Doug Sillars", "Performance Engineer (Freelance)", "Digital Nomad, USA"));

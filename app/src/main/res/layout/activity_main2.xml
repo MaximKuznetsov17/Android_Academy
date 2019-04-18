@@ -4,6 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/marginField"
     tools:context=".ThirdActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/authorName"
+        app:layout_constraintLeft_toRightOf="@id/flagImage"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/authorPosition"
+        app:layout_constraintLeft_toRightOf="@id/flagImage"
+        app:layout_constraintTop_toBottomOf="@id/authorName"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/authorLocation"
+        app:layout_constraintLeft_toRightOf="@id/flagImage"
+        app:layout_constraintTop_toBottomOf="@id/authorPosition"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewProfile"
+        app:layout_constraintLeft_toRightOf="@id/flagImage"
+        app:layout_constraintTop_toBottomOf="@id/authorLocation"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/imageSize"
+        android:layout_height="@dimen/imageSize"
+        app:civ_border_width="@dimen/borderSize"
+        app:civ_border_color="@color/colorBorder"
+        android:id="@+id/authorImage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/flagSize"
+        android:layout_height="@dimen/flagSize"
+        app:civ_border_width="@dimen/borderSize"
+        app:civ_border_color="@color/colorBorder"
+        app:layout_constraintRight_toRightOf="@id/authorImage"
+        app:layout_constraintBottom_toBottomOf="@id/authorImage"
+        android:id="@+id/flagImage" />
+
 
 </android.support.constraint.ConstraintLayout>
